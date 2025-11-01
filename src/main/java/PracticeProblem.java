@@ -1,27 +1,14 @@
-public class PracticeProblem {
+class PracticeProblem {
 
-	public static void main(String args[]) {
+    public static void main(String[] args) {
+        System.out.println(towerOfHanoi(3));  // 7
+        System.out.println(towerOfHanoi(4));  // 15
+        System.out.println(towerOfHanoi(2));  // -1
+    }
 
-	}
-
-	public static void q1() {
-		//Write question 1 code here
-	}
-
-	public static void q2() {
-		//Write question 2 code here
-	}
-
-	public static void q3() {
-		//Write question 3 code here
-	}
-
-	public static void q4() {
-		//Write question 4 code here
-	}
-
-	public static void q5() {
-		//Write question 5 code here
-	}
-
+    public static int towerOfHanoi(int num) {
+        if (num < 3) return -1;
+        if (num == 3) return 7;
+        return 2 * towerOfHanoi(num - 1) + 1;
+    }
 }
